@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/layout.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculando fluxo de caixa</title>
+</head>
+
+<body>
+    <main>
+        <h1>Calculando fluxo de caixa   </h1>
+        <form>
+            <fieldset class="inputs-receitas">
+                <h3>Receitas</h3>
+                <input type="number" name="entrada" id="input-entrada" placeholder="Digite um valor de entrada">
+                <input type="button" value="Adicionar receita" id="button-receita">
+            </fieldset>
+
+            <fieldset class="inputs-despesas">
+                <h3>Despesas</h3>
+                <input type="number" name="saida" id="input-saida" placeholder="Digite um valor de saída">
+                <input type="button" id="button-despesa" value="Adicionar despesa">
+            </fieldset>
+
+            <fieldset class="outputs-gerais" id="outputs">
+                <h3>Resumo</h3>
+                <input type="text" readonly id="output-entradas" placeholder="Total de entrada">
+                <input type="text" readonly id="output-saidas" placeholder="Total de saída">
+                <input type="button" id="button-calcula" value="Atualizar vendas liquidas">
+            </fieldset>
+
+            <fieldset>
+                <h3>Calculo de caixa</h3>
+                <input type="text" readonly id="output-vendasLiquidas" placeholder="Liquidez do caixa">
+
+            </fieldset>
+
+            <input type="button" id="button-reset" value='Reset'>
+        </form>
+    </main>
+</body>
+
+<script src="./src/index.js"></script>
+
+</html>

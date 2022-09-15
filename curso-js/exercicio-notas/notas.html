@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/layout.css">
+    <title>Exercícios Notas</title>
+</head>
+
+<body>
+
+    <section class="intro-container">
+        <h1>Exercícios - Notas</h1>
+        <p>Nesse exercício será feito um sitema de conversão de notas de acordo com a porcentagem de acerto.</p>
+        <p>As notas irão de A à F, de acordo com a porcentagem inserida no campo.</p>
+        <form>
+            <input type="number" name="nota" id="inputNota" placeholder="Insira a nota do aluno.">
+            <input type="button" value="Gerar nota" onclick="ativar()">
+        </form>
+    </section>
+
+
+    <section class="result-container">
+        <h2>Resultado:</h2>
+        <div class="grade-container"></div>
+    </section>
+
+    <script src="./src/notas.js"></script>
+</body>
+
+</html>

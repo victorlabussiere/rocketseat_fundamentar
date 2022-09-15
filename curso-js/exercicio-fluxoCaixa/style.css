@@ -1,0 +1,13 @@
+*{
+    color: #062c02;
+}
+
+input[type=button]:hover {
+    transform: scale(1.01);
+    transition: .2s all ease-in-out;
+    background-color: #dff3b2;
+}
+
+input[type=button]:active {
+    background-color: #b6df56;
+}

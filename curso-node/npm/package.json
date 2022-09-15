@@ -1,0 +1,12 @@
+{
+  "name": "node-studies",
+  "version": "1.0.0",
+  "description": "Start learning NodeJS with rocketseat free course",
+  "main": "node-npm.js",
+  "scripts": {
+    "start": "node node-npm.js"
+  },
+  "keywords": [],
+  "author": "Victor Labussiere",
+  "license": "ISC"
+}
