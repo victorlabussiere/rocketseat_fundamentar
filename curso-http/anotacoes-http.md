@@ -272,3 +272,20 @@ Uso no curl: curl -X OPTIONS -> observar nas opções se aceita o patch no servi
     -- Uoa formulários em HTML: não
     -- Cacheable: não
 Uso no curl: -x DELETE http://dominio.../posts/2('target exmaple') 
+
+### Headers ###
+- Cabeçalhos
+- Indformações adicionais para o pedido ou reposta 
+               -- Content-type: application/json
+- Nome: valor{                                  } exemplos
+               -- Content-type: text/html 
+
+>>> Headers por contexto 
+- General
+- Request headers
+- Reponse headers
+(Os contextos estão presentes na aba Network do devtools)
+
+>>> Como obter ajuda?
+- Download DevDocs
+    -- App online instalado na máquina: serve para exbir documentação sobre diversos tipos de tecnologias e protocolos.
