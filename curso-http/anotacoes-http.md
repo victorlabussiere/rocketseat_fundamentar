@@ -173,3 +173,70 @@ No caso do post e do patch, se levarmos um exemplo como cadastrar, a resposta do
 No caso do method patch também uma vez que ele retorna uma resposta do servidor de acordo com a mudança realizada.
 
 Em relação á segurança do servidor, sempre que um método altera um atributo/ elemento, a estrutura do servidor é alterada de acordo com a mudança, por isso sempre haverá risco com métodos não seguros.
+
+>>> OPTIONS
+- Informação sobre disponibilidade da requisição
+    -- OPTIONS /index.html HTTP/1.1
+    -- OPTIONS * HTPP/1.1
+- Características 
+    -- Seguro: sim
+    -- Idempotente: sim
+             --- Request: Não
+    -- BODY{
+             --- Response: Não
+    -- Uso em formulários HTML: Não
+    -- Cacheable: Não
+Uso no curl: curl -X OPTIONS http://dominio
+
+>>> GET
+- Pegar um recurso
+- Somente recebe dados
+- Características
+    -- Seguro: sim
+    -- Idempotente: sim
+             --- Request: não 
+    -- BODY{
+             --- response: sim
+    -- Cacheable: sim
+    -- Uso de formulários HTML: sim
+Uso no curl: curl http://dominio...
+
+>>> HEAD
+- Semelhante ao GET, porém recebe somente o cabeçalho --> HEAD/ posts (exemplo)
+- Características
+    -- Seguro: sim
+    -- Idempotente: sim
+             --- Request: não
+    -- Body{                   } não possui body pra envio e nem pra resposta...
+             --- Response: não
+    -- Uso em formulário HTML: não
+    -- Cacheable: sim
+Uso no curl: curl -I http...
+
+>>> POST
+- Publicar / Cadastrar um recurso
+- Características
+    -- Seguro: não
+    -- Idempotente: não
+             --- Request
+    -- Body{
+             --- Response
+    -- Uoa formulários em HTML: sim
+    -- Poderá ser cacheable
+Uso no curl: curl -d '{"objeto do tipo": "json"}
+
+>>> PUT
+- Cria um novo ou atualiza um recurso 
+    -- PUT (profile HTTP/1.1)
+    -- Diferença entre o POST? PUT é idempotente e é, em geral, mais usado para atualização de um recurso.
+    -- Ao usar o PUT para criação, o status code será 201
+    -- Atualização - status code 204 ou 200
+- Características
+    -- Seguro: não
+    -- Idempotente: sim
+             --- Request: sim
+    -- Body{
+             --- Response: não 
+    -- Uoa formulários em HTML: não
+    -- Cacheable: não
+         
