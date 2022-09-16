@@ -239,4 +239,36 @@ Uso no curl: curl -d '{"objeto do tipo": "json"}
              --- Response: não 
     -- Uoa formulários em HTML: não
     -- Cacheable: não
-         
+Uso no curl: curl -d "{"objeto": "json"} -H 'Content-type: application/json' -X PUT http://dominio...
+
+>>> PATCH
+- Modificação parcial de um recurso
+    -- Diferença entre o PUT? -> o PATCH altera apenas um parte do recurso enquanto o PUT irá alterar o recurso por inteiro.
+    -- PATCH/posts/1 HTTP/1.1
+- Características
+    -- Seguro: não
+    -- Idempotente: não
+             --- Request: sim
+    -- Body{
+             --- Response: sim
+    -- Uoa formulários em HTML: não
+    -- Cacheable: não
+Uso no curl: curl -X OPTIONS -> observar nas opções se aceita o patch no servidor
+    -- curl -d {"argument title": "argument" } -H "Content-type: application/json" -X PATCH http://dominio...
+
+>>> DELETE 
+- Remover um recurso
+    -- DELETE/posts HTTP/1.1
+    -- Status code
+        --- 202: accpeted
+        --- 204: no content
+        --- 200: ok
+- Características
+    -- Seguro: não
+    -- Idempotente: sim
+             --- Request: possibilidade
+    -- Body{
+             --- Response: ppossibilidadee
+    -- Uoa formulários em HTML: não
+    -- Cacheable: não
+Uso no curl: -x DELETE http://dominio.../posts/2('target exmaple') 
