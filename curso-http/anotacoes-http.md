@@ -102,3 +102,74 @@
 >> Resumo 
 - URI é a fomra de encontrar um recurso, que se trata de qualquer entidade, identificável, na internet pelo seu nome ou pelo seu local. 
 - A forma mais usada é pelo local, usando a URL (Uniform Resource Locator), que possui 2 componentes obrigatórios, o protocolo e o domínio, além de 5 opicionais: o subdominio, o path, os parâmetros, a porta e a âncora.
+
+### Messages ###
+- Mensagens entre o cliente e o servidor:
+-- São pedidos e respostas passados por HTTP Messages
+
+>> Tipos de Mensagens
+- Request
+    -- Request Line 
+        --- Method
+        --- Protocol version
+        --- URI
+- Body
+- Headers
+
+- Response 
+    -- Protocol Version
+    -- Status Code
+    -- Headers
+    -- Status Message
+
+### Methoda ###
+    -- OPTIIONS
+    -- GET
+    -- HEAD
+    -- POST
+    -- PUT
+    -- PATCH
+    -- DELETE
+
+>> HTTP Methods 
+    -- Define um conjunto de métodos HTTP
+    -- Indica a ação que o cliente deseja operar
+    -- Podem ser chamados de verbos HTTP
+    -- Cada um possui a sua semântica
+    -- Características
+        --- Seguro 
+            ---- Não altera o estado do servidor
+            ---- Somente leitura
+            ---- Cliente não solicita alterações
+            ---- Não há carga extra para o servidor
+            ---- O servidor é responsável em manter o método seguro
+            ---- Quais são?
+                ----- GET -> GET /search.html HTTP/1.1
+                ----- HEAD
+                ----- OPTIONS
+        --- Idempotente (IDEM + potente)
+            ---- Ao executar o método, a resposta deverá ser sempre a mesma
+            ---- Quais são?
+                ----- Todos os seguros são idempotentes
+                ----- PUT
+                ----- DELETE
+            ---- Status code poderá ser diferente -> define qual foi a conversa entre pedido e resposta (404, 200, 500 etc)
+            ---- O servidor tem a responsabilidade de retornar dados da mesma maneira 
+            ---- Essa especificação não é garantida de que todos os servidores irão aplicar o conceito corretamente
+
+>>> IDEMPOTENCE
+A resposta do servidor será sempre a mesma 
+
+HTTP METHOD  |  IDEMPOTENCE  |   SAFETY    |
+    GET      |      YES      |     YES     |
+    HEAD     |      YES      |     YES     | 
+    PUT      |      YES      |     NO      | 
+    DELETE   |      YES      |     NO      | 
+    POST     |       NO      |     NO      |
+    PATCH    |       NO      |     NO      |
+
+No caso do post e do patch, se levarmos um exemplo como cadastrar, a resposta do servidor poderá ser diferente de acordo com a o tipo e a identificação do usuário
+    - por exemplo, uma resposta padrão de cadastro realizado -> usuário1 cadastrado com sucesso -> usuário2 cadastrado com sucesso etc...
+No caso do method patch também uma vez que ele retorna uma resposta do servidor de acordo com a mudança realizada.
+
+Em relação á segurança do servidor, sempre que um método altera um atributo/ elemento, a estrutura do servidor é alterada de acordo com a mudança, por isso sempre haverá risco com métodos não seguros.
