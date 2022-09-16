@@ -289,3 +289,29 @@ Uso no curl: -x DELETE http://dominio.../posts/2('target exmaple')
 >>> Como obter ajuda?
 - Download DevDocs
     -- App online instalado na máquina: serve para exbir documentação sobre diversos tipos de tecnologias e protocolos.
+
+### Status Code ###
+- Mais usados:
+>>> 100
+    -- 100: Continue
+>>> 200
+    -- 200: OK (GET, POST)
+    -- 201: CREATED (PUT)
+    -- 204: No content(DELETE, PUT)
+>>> 300
+    -- 301: Moved permanetly
+    -- 308: Permanetluy redirect
+    -- 302: Found
+    -- 307: Temporary redirect
+>>> 400
+    -- 400: Bad Request
+    -- 401: Unauthorized
+    -- 403: Forbidden
+    -- 404: Not Found
+    -- 405: Method not Allowed
+    -- 429: Too many requests
+>>> 500
+    -- 500: Internal Server Error
+    -- 503: Service Unavaliable
+
+>>> Para mais ajuda, Dev docs...
