@@ -1,24 +1,24 @@
-> Curso de Programação Orientada a Objetos.
+# Curso de Programação Orientada a Objetos.
 
-* O que é Programação Orientada a Objetos? --> POO
+## O que é Programação Orientada a Objetos? --> POO
 - Oriented Object Programming ou OOP;
 - Um paradigma de desenvolvimento;
 - Uma maneira de resolver um problema, um modo de pensar;
 - Não está ligada somente à linguagem de programação, mas a um entendimento amplo e atemporal para criação de softwares.
 
-* Utilização prática no mercado:
+## Utilização prática no mercado:
 - Está na maioria dos sitemas atuais;
 - várias linguagens (JS, TS, JAVA, Python)
 - Utilizado por analistas de sistemas e não somente por programadores
---> Na fase de levantamento de requisitos de sistemas;
---> Via gráficos, desenhos e textos.
+- - Na fase de levantamento de requisitos de sistemas;
+- - Via gráficos, desenhos e textos.
 
-* Onde e quando utilizar POO?
+## Onde e quando utilizar POO?
 - Linguagens (dependendo da linguagem, ela é orientada a objetos e não tem como usar outro paradigma)
---> Existem:
-    --> Orientadas a Objetos
-    --> Multi-Paradigmas -> Possibilidade de escolher entre ser orientada ou ser funcional
-    --> Funcional -> não é orientada a objetos.
+- Existem:
+- - Orientadas a Objetos
+- - Multi-Paradigmas -> Possibilidade de escolher entre ser orientada ou ser funcional
+- - Funcional -> não é orientada a objetos.
 - Quando quiser aplicações Padrões de Projetos
 - Quando quiser organizar seu código
 - Para melhorar o entendimento do código, pensando nele como objetos
@@ -26,41 +26,41 @@
 - Para separar a complexidade de código, abstrair código e expor de maneira simples
 - Para classificar as rotinas e trechos de código.
 
-* Conceitos
+## Conceitos
 - Precisamos entender os conceitos eparadigma e não somente códigos; // base de comunicação entre desenvolvedores/ analistas etc
 - Uma boa fundamentação
 
-* Objetos
-> Todo objeto possui
+## Objetos
+* Todo objeto possui
 - Propriedaes e Funcionalidades
 - Estados e Comportamentos
 - Atributos e Métodos
 
-> Abstratos vs Mundo Real
+## Abstratos vs Mundo Real
 - Trazemos a representação de algo do mundo real para Objetos
--- Pessoa
--- Aluno
--- Produto
--- Carrinho de compras
+- - Pessoa
+- - Aluno
+- - Produto
+- - Carrinho de compras
 
 - Porém, alguns objetos na progração não são fáceis de identificar, posi são abstratos como, por exemplo:
--- Autenticação
--- Autorização
+- - Autenticação
+- - Autorização
 
 ! Nem todo objeto do mundo real fara parte do seu sistema.
 
-* Classes
-> As classes, na orientação a objeto, funcionam como um molde para os objetos. Os Objetos são criados a partir de uma classe e, muitos deles, podem ser feitos da mesma classe.
+## Classes
+* As classes, na orientação a objeto, funcionam como um molde para os objetos. Os Objetos são criados a partir de uma classe e, muitos deles, podem ser feitos da mesma classe.
 
 - Exemplo: Máquina de biscoito:
--- Instâncias -> Biscoito.
----> Nesse caso, a classe é a máquina de biscoitos, ela retorna biscoitos através de suas funções/métodos.
+- - Instâncias -> Biscoito.
+- - - Nesse caso, a classe é a máquina de biscoitos, ela retorna biscoitos através de suas funções/métodos.
 
 * Classes em JavaScript
 - Syntactical sugar -> o objeto irá herdar métodos a partir das próprias características.
 - Prototype -> esses métodos são herdados porquê todos os objetos criados em JS são protótipos. Isso é, por padrão, já possuem métodos atribuídos previamente de acordo com seu tipo (Number, String, Array...).
 
-* Encapsulamento
+## Encapsulamento
 Dirigir um carro != Conhecer o motor do carro.
 
 - Colocar numa capsula.
@@ -68,7 +68,7 @@ Dirigir um carro != Conhecer o motor do carro.
 - Esconder detalhes de implementação
 - Camada de segurança para os atributos e métodos.
 
---> Comparação com ligar um carro vs conhecer o funcionamento do carro
+- - Comparação com ligar um carro vs conhecer o funcionamento do carro
 
 girar a chave do carro seria uma função que executa todas as etapas necessárias para dar a partida.
 ```js
@@ -80,7 +80,7 @@ function ligarCarro() {
     ...etc
 }
 ```
-* Entendendo Encapsulamento com JavaScript
+## Entendendo Encapsulamento com JavaScript
 Existem maneiras diferentes de digitar um código
 
 ```js
@@ -130,15 +130,15 @@ console.log(poligono, '-> poligono retorna os atributos dentro do objeto')
 
 ```
 
-* Confusão e Solução 
+## Confusão e Solução 
 Programação Estruturada x Orientada a Objetos
 
-> Programação Estruturada
+* Programação Estruturada
 - Processa a entrada e manipulação dos dados, até a saída
 - Uso de sequências, estruturas de repetição e condições
 - Uso de uma rotina maior, ou sub-rotinas
 
-> Programação Orientada a Objetos
+* Programação Orientada a Objetos
 - Surge para trazer um cuidado ao uso estruturado
 -- Não elimina por completo o uso estruturado
 - Conceitos como Objetos e Classes (encapsulamento)
@@ -164,12 +164,12 @@ console.log(custoEstimado)
 
 // Na maneira POO, a formatação se torna mais regrada pois há uma estrutura por trás que define previamente os atributos e métodos dos objetos que são reutilizados sempre que necessário.
 ```
-* Herança
+## Herança
 - Pais e Filhos
 - Objetos podem herdar, ou estender, características bases
 - Uma cópia de atributos e métodos de outra classe
 
-> Exemplo
+* Exemplo
 ```js
 
 class Veiculo {
@@ -191,18 +191,18 @@ class Moto extends Veiculo { // extends é a expressão que diz que Moto é filh
 - Fácil reutilização de código.
 - A herança por protótipo já existe por padrão.
 
-* Polimorfismo
+## Polimorfismo
 - Quando um objeto estende de outro (herança), tavez haja a necessidade de reescrever uma ou mais características (atributos e métodos) nesse novo objeto
 - Recriaremos então um método (ou mais) da classe herdade
 
-> Polimorfismo significa 'Muitas Formas'
+* Polimorfismo significa 'Muitas Formas'
 
-> Exemplo
+* Exemplo
 - classe Ave possui atributos como voar
     pato pode ser um objeto da classe ave e não possuir o atributo voar por longos períodos.
     já o objeto bem-te-vi da classe Ave pode voar por longos períodos.
 
-* Entendendo Polimorfismo com JavaScript
+## Entendendo Polimorfismo com JavaScript
 
 ```js
 //arquivo atleta.js
@@ -255,7 +255,7 @@ lutador.definirCategoria()
 console.log(lutador)
 
 ```
-* Abstração 
+## Abstração 
 Template ou Identidade de uma classe que será construida no futuro
 - Atributos e métodos podem ser criados na classe de Abstração (Superclasse) MAS...
 - A implementação dos métodos e atributos só poderão ser feitos na classe que irá herdar essa abstração.
@@ -301,11 +301,11 @@ console.log(allen.tipo) // 'Método "get tipo() precisa ser implementado'
 
 ```
 
-* Resumo de Programação Orientada a Objetos:
-> É uma maneira de se interpretar um problema e aplicar no código.
+## Resumo de Programação Orientada a Objetos:
+* É uma maneira de se interpretar um problema e aplicar no código.
 - Se baseia em criar classes de objetos que podem ser reutilizadas ao longo do código
 - A orientação à objetos tem princíos
-- -> Encapsulamento: esconder detalhes de implementação do mundo exterior.
-- -> Herança: Quando classes herdam atributos de classes parentes
-- -> Polimorfismo: Quando as classes herdeiras adaptam os atributos herdados
-- -> Abstração: Conceito de superclasse que explica como outras classes serão criadas a partir dela. A classe que será extendida à outras.
+- - Encapsulamento: esconder detalhes de implementação do mundo exterior.
+- - Herança: Quando classes herdam atributos de classes parentes
+- - Polimorfismo: Quando as classes herdeiras adaptam os atributos herdados
+- - Abstração: Conceito de superclasse que explica como outras classes serão criadas a partir dela. A classe que será extendida à outras.
