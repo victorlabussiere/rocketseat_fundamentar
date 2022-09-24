@@ -28,6 +28,6 @@ function ativar() {
         }
     }
 
-    var calculaNota = nota >= 0 && nota <= 100 ? retornaNota() : areaResultado.innerHTML += `<p>O valor máximo permitido é 100</p>`
+    var calculaNota = nota >= 0 && nota <= 100 ? retornaNota() : areaResultado.innerHTML += `<p>Digite um valor entre 0 e 100</p>`
     return calculaNota;
 }
